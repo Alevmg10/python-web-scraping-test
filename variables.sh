@@ -1,0 +1,2 @@
+export TWEETS_LIMIT=500
+export CSV_DELIMITER=";"
