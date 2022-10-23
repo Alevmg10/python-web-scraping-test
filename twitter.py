@@ -10,7 +10,7 @@ delimiter = environ.get("CSV_DELIMITER")
 def twitter_scraper(url):
 
     tweets = []
-    print("Iniciando Twitter scraper")
+    print("Iniciando scraper de Twitter")
     for tweet in sntwitter.TwitterSearchScraper(url).get_items():
 
         if len(tweets) == limit:
