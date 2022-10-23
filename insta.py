@@ -11,9 +11,9 @@ import csv
 from lxml import html
 import time
 
-browser = webdriver.Chrome()
-USERNAME = "su nombre usuario"
-PASSWORD = "su contraseña"
+browser=webdriver.Chrome()
+USERNAME="su nombre usuario"
+PASSWORD="su contraseña"
 
 delimiter = environ.get("CSV_DELIMITER")
 id_variable=environ.get("INSTA_ID_CLASE")
