@@ -11,6 +11,7 @@ def twitter_scraper(url):
 
     tweets = []
     print("Iniciando scraper de Twitter")
+    #obtener los elementos de la pagina que vamos a usar para el scraper
     for tweet in sntwitter.TwitterSearchScraper(url).get_items():
 
         if len(tweets) == limit:
@@ -20,7 +21,7 @@ def twitter_scraper(url):
 
     df = pd.DataFrame(tweets, columns=["Date", "User", "Tweet"])
 
-    # save to csv
+    # guardar en archivo csv
     df.to_csv("tweets.csv", sep=delimiter, index=False)
     print('Scraper finalizado')
 

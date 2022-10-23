@@ -23,6 +23,7 @@ def facebook_scraper(url):
     comment_lst = []
     user_lst = []
 
+    #obtener los elementos de la pagina que vamos a usar para el scraper
     try:
         time.sleep(5)
         comment_elements = browser.find_elements(By.CLASS_NAME, clase_variable)
@@ -36,6 +37,7 @@ def facebook_scraper(url):
         comment_lst.append(list_all[1])
         user_lst.append(list_all[0])
 
+    # guardar en archivo csv
     dict = {'User ID': user_lst, 'Comment': comment_lst}
     df = pd.DataFrame(dict)
     df.to_csv("facebook.csv", sep=delimiter, index=False)
